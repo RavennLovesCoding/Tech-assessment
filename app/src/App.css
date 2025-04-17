@@ -7,6 +7,17 @@ body {
   display: grid;
 }
 
+.layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.books {
+  flex: 2; /* Takes more space */
+}
+
+
 .bookCard {
   background-color: #fff;
   display: grid;
@@ -42,6 +53,17 @@ li {
   font-size: 14px;
 }
 
+.readMore2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 10px;
+  padding: 10px 0px;
+  font-size: 14px;
+}
+
+
 button {
   background-color: rgb(1, 161, 1);
   width: 45px;
@@ -57,4 +79,45 @@ button {
   width: 45px;
   height: 45px;
   margin-left: 10px;
+}
+
+img {
+  width: '100px';
+  height: 'auto';
+  display: 'block';
+  marginBottom: '10px';
+}
+
+.favorites {
+  flex: 1;
+}
+
+.remove-button {
+  background-color: red;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 20px 0px 0 50px;
+}
+
+.remove-button:hover {
+  background-color: darkred;
+}
+
+.favRow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.readMoreInfo {
+  width: 100%;
+  margin-top: 100px;
 }
