@@ -1,3 +1,33 @@
 .App {
   text-align: center;
 }
+
+body {
+  background-color: rgb(243, 243, 243);
+  display: grid;
+}
+
+.bookCard {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+li {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid rgb(245, 245, 245);
+  box-shadow: 5px 2px 2px rgb(231, 231, 231);
+  list-style-type: none;
+}
+
+button {
+  background-color: rgb(1, 161, 1);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #fff;
+  margin-left: 20px;
+  border: none;
+}
