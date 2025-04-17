@@ -22,6 +22,26 @@ li {
   list-style-type: none;
 }
 
+.pages {
+  font-size: 16px;
+  color:#a7a5a5
+
+}
+
+.author {
+  font-size: 20px;
+  color:#a7a5a5
+}
+
+.readMore {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  padding: 10px 0px;
+  font-size: 14px;
+}
+
 button {
   background-color: rgb(1, 161, 1);
   width: 45px;
@@ -31,4 +51,10 @@ button {
   font-size: 40px;
   margin-left: 20px;
   border: none;
+}
+
+.heartIcon {
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
 }

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import '../src/App.css';
 import books from "../src/books.json";
+import Heart from 'react-heart';
 
 function App () {
   const [readMore, setReadMore] = useState({});
+  const [fav, setFav] = useState({});
   
   const toggleReadMore  = (index) => {
     setReadMore((prev) => ({
@@ -12,6 +14,15 @@ function App () {
     }))
   };
 
+  const toggleFav = (index) => {
+    setFav((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
+
+
   return (
     <div>
       <h1>Books</h1>
@@ -19,15 +30,21 @@ function App () {
       <ul className="bookCard">
         {books.map((book, index) => (
           <li key={index} style={{ marginBottom: '20px' }}>
-            <p>Author: {book.author}</p>
+            <p className="author">{book.author}</p>
             <h2>{book.title}</h2>
-            <p>Pages:{book.pages}</p>
+            <p className="pages">{book.pages} pages</p>
             <img 
               src={book.imageLink} 
               alt={`Cover of ${book.title}`} 
               style={{ width: '150px', height: 'auto', display: 'block', marginBottom: '10px' }}
             />
-            <p>Read More <button onClick={() => toggleReadMore(index)}>+</button></p>
+            <p className="readMore">Read More <button className="add" onClick={() => toggleReadMore(index)}>+</button>  <Heart
+                  isActive={fav[index] || false} 
+                  onClick={() => toggleFav(index)}
+                  className="heartIcon"
+                />
+
+            </p>
 
             {readMore[index] && (
                 <div>
